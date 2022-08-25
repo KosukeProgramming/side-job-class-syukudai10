@@ -1,0 +1,254 @@
+@charset "utf-8";
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+/* 以上リセットCSS */
+
+/********************************
+* voice
+********************************/
+.voice {
+    background-color: #EFF2FC;
+}
+.voice__inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 100px 10px;
+}
+.voice__item {
+    display: flex;
+    justify-content: center;
+}
+.voice__item.reverse {
+    margin-top: 50px;
+    flex-direction: row-reverse;
+}
+.voice__item-user {
+    width: 25%;
+    text-align: center;
+}
+.voice__item-title {
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 100vh;
+    color: #fff;
+    background-color: #111;
+}
+.voice__img-inner {
+    margin: 20px auto;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    text-align: center;
+}
+.voice__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.voice__name {
+    font-size: 14px;
+    line-height: 1.5;
+}
+.voice__item-des {
+    position: relative;
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.voice__item-des::after {
+    content: '';
+    position: absolute;
+    top: 70px;
+    right: 100%;
+    border-right: 25px solid #fff;
+    border-top: 12.5px solid transparent;
+    border-bottom: 12.5px solid transparent;
+}
+.voice__item.reverse .voice__item-des::after {
+    left: 100%;
+    border-right: none;
+    border-left: 25px solid #fff;
+}
+.voice__item-des-list {
+    color: pink;
+}
+.voice__item-des-title {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #111;
+}
+.voice__item-des-text {
+    line-height: 1.5;
+    text-indent: -1em;
+    margin-left: 1em;
+    margin-bottom: 5px;
+}
+.voice__item-des-text:last-of-type {
+    margin-bottom: 0;
+}
+.voice__item-des-text::before {
+    content: '';
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin-right: 7px;
+    background-color: #C10E6E;
+}
+.voice__item-des-text span{
+    color: #111;
+}
+.voice__tag-inner {
+    margin-top: 20px;
+    margin-bottom: -10px;
+}
+.voice__tag {
+    display: inline-block;
+    padding: 8px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    color: #fff;
+    background-color: grey;
+}
+
+@media screen and (max-width:767px) {
+    .voice__item {
+        flex-direction: column;
+    }
+    .voice__item.reverse {
+        flex-direction: column;
+        margin-top: 80px;
+    }
+    .voice__item-des {
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .voice__item-user {
+        width: 100%;
+    }
+    .voice__user-inner {
+        display: flex;
+        align-items: center;
+    }
+    .voice__img-inner {
+        margin: 20px 0;
+    }
+    .voice__name {
+        padding-left: 20px;
+    }
+    .voice__item-des::after, .voice__item.reverse .voice__item-des::after {
+        top: initial;
+        bottom: 100%;
+        left: 30px;
+        border-bottom: 15px solid #fff;
+        border-right: 7.5px solid transparent;
+        border-left: 7.5px solid transparent;
+    }
+}
